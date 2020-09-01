@@ -14,11 +14,12 @@
       
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/login" id="logout">logout</a>
         {{else}}
-        <a href="/login">login</a>
-        <a href="/signup">signup</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
         {{/if}}
       </nav>
       <h1>
