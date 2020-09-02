@@ -2,10 +2,11 @@
   "name": "the-tech-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "express-session": "^1.17.1",
     "heroku": "^7.42.13",
     "mysql2": "^2.1.0",
+    "seed": "^0.4.4",
     "sequelize": "^6.3.4"
   },
   "devDependencies": {
