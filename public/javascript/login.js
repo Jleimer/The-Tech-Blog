@@ -22,32 +22,13 @@ async function loginFormHandler(event) {
   }
 }
 
-async function signupFormHandler(event) {
-  event.preventDefault();
-
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-
-  if (username && email && password) {
-    const response = await fetch('/api/users', {
-      method: 'post',
-      body: JSON.stringify({
-        username,
-        email,
-        password
-      }),
-      headers: { 'Content-Type': 'application/json' }
-    });
-
-    if (response.ok) {
-      document.location.replace('/dashboard/');
-    } else {
-      alert(response.statusText);
-    }
-  }
+const testFunc = function(event) {
+  console.log('hello');
 }
 
+
+let a = document.querySelector('.login-form')
+console.log("this is login handler", a)
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-// document.querySelector('#signup').addEventListener('click, ');
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+//
+document.querySelector('.signup-form').addEventListener('submit', testFunc);
